@@ -16,7 +16,7 @@ RUN apk --no-cache add qemu-mipsel
 WORKDIR /root/
 
 COPY --from=0 /root/squashfs-root /root/
-ADD r.sh  .
+ADD r.sh /sbin/
 
-ENTRYPOINT ["./r.sh"]
+ENTRYPOINT ["/sbin/r.sh"]
 
