@@ -4,7 +4,7 @@ The container will chroot to the mipsel rootfs, so we need to bind mount `/dev`,
 
 You can access mipsel's shell environment in this way:
 ```shell
-docker run --rm --cap-add=SYS_ADMIN -it candysunplus/alpine:mipsel-runner /bin/sh
+docker run --rm --cap-add=SYS_ADMIN -it candysunplus/mipsel-runner:alpine /bin/sh
 ```
 
 ## Mount share data to container
@@ -12,5 +12,5 @@ docker run --rm --cap-add=SYS_ADMIN -it candysunplus/alpine:mipsel-runner /bin/s
 The container only supports mounting `/share` to mipsel rootfs, if you want to share host files to the container, you need to mount the host share directory to the `/share` mount point.
 
 ```shell
-docker run --rm --cap-add=SYS_ADMIN -it -v $PWD:/share candysunplus/alpine:mipsel-runner /bin/ash
+docker run --rm --cap-add=SYS_ADMIN -it -v $PWD:/share candysunplus/mipsel-runner:alpine /bin/ash
 ```
