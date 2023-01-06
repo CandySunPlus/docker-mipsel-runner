@@ -1,7 +1,8 @@
 How to Run
 ---
-The container will chroot to the mipsel rootfs, so we need to bind mount `/dev`, `/proc` and `/sys` to mipsel rootfs, which require docker `SYS_ADMIN` permission: 
+The container will chroot to the mipsel rootfs, so we need to bind mount `/dev`, `/proc` and `/sys` to mipsel rootfs, which require docker `SYS_ADMIN` permission. 
 
+You can access mipsel's shell environment in this way:
 ```shell
 docker run --rm --cap-add=SYS_ADMIN -it candysunplus/alpine:mipsel-runner /bin/sh
 ```
